@@ -1,0 +1,44 @@
+<h3>Editar Alumno</h3>
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="formulario" (ngSubmit)="editarAlumno()">
+            <div class="row">
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nombre </mat-label>
+                        <input matInput formControlName="nombre">
+                    </mat-form-field>
+                </div>
+        
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Apellido</mat-label>
+                        <input  matInput formControlName="apellido">
+                    </mat-form-field>
+                
+                </div>
+
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Edad</mat-label>
+                        <input  matInput formControlName="edad">
+                    </mat-form-field>
+                
+                </div>
+
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input  matInput formControlName="email">
+                    </mat-form-field>
+                
+                </div>
+        
+                <div class="col-md-12">
+                    <button mat-raised-button color="primary" type="submit" class="fill">Editar alumno</button>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>

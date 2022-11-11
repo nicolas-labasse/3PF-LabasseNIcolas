@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+      <button class="btn btn-primary" (click)="agregarClase('nuevo')">Agregar Clase</button>
+        <div class="col-4 mt-4" *ngFor="let clase of clases$ | async">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ clase.nombre }}</h5>
+                  <p class="card-text">{{ clase.descripcion }}</p>
+                 
+                 
+                <button class="btn btn-primary me-2" (click)="editarClase(clase.id)">Editar Clase</button>
+
+                <button class="btn btn-primary" (click)="eliminarClase(clase.id)">Eliminar Clase</button>
+                
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

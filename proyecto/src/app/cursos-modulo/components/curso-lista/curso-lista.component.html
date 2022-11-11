@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+      <button class="btn btn-primary" (click)="agregarCurso('nuevo')">Agregar Curso</button>
+        <div class="col-4 mt-4" *ngFor="let curso of cursos$ | async">
+            <div class="card">
+                <img [src]="curso.imagen" class="card-img-top" alt="Fissure in Sandstone"/>
+                <div class="card-body">
+                  <h5 class="card-title">{{ curso.nombre }}</h5>
+                  <p class="card-text">{{ curso.profesor }}</p>
+                  <p class="card-text">{{ curso.fechaInicio | date: 'dd/MM/YYYY' }}</p>
+                  <p class="card-text">{{ curso.fechaFin | date: 'dd/MM/YYYY' }}</p>
+                <button class="btn btn-primary me-2" (click)="editarCurso(curso.id)">Editar Curso</button>
+
+                <button class="btn btn-primary" (click)="eliminarCurso(curso.id)">Eliminar Curso</button>
+                
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

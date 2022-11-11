@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+      <button class="btn btn-primary" (click)="agregarAlumno('nuevo')">Agregar Alumno</button>
+        <div class="col-5 mt-4" *ngFor="let alumno of alumnos$ | async">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ alumno.nombre }}</h5>
+                  <p class="card-text">{{ alumno.apellido }}</p>
+                  <p class="card-text">{{ alumno.edad }}</p>
+                  <p class="card-text">{{ alumno.email }}</p>
+                <button class="btn btn-primary me-2 " (click)="editarAlumno(alumno.id)">Editar Alumno</button>
+
+                <button class="btn btn-primary" (click)="eliminarAlumno(alumno.id)">Eliminar Alumno</button>
+                
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
